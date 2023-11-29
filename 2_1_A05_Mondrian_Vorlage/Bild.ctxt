@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Bild
+comment0.text=\r\n\ Klasse\ zum\ Zeichnen\ eines\ Bildes.\r\n\ \r\n\ @author\ Klaus\ Reinold\r\n\ @version\ 1.0\r\n
+comment1.params=anzahl
+comment1.target=Bild(int)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Bild\r\n
+comment2.params=
+comment2.target=java.lang.String\ FarbeGeben()
+comment3.params=anzahlRechtecke
+comment3.target=void\ BildZeichnen(int)
+comment4.params=
+comment4.target=java.lang.String\ BildnameGeben()
+numComments=5

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Vogel
+comment0.text=\r\n\ Klasse\ zur\ Darstellung\ eines\ Vogels\r\n\ \r\n\ @author\ Klaus\ Reinold\ \r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=void\ VogelFl\u00FCgelObenZeichnen()
+comment1.text=\r\n\ Darstellung\ des\ Vogels\ gem\u00E4\u00DF\ Skizze\r\n
+numComments=2

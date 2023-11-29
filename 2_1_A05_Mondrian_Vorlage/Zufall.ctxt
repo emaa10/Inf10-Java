@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Zufall
+comment1.params=
+comment1.target=Zufall()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Zufall\r\n
+comment2.params=n
+comment2.target=int\ GanzzahlGeben(int)
+comment2.text=\r\n\ Erzeugung\ einer\ zuf\u00E4lligen\ Ganzzahl\ aus\ dem\ Intervall\ [0,\ n[\r\n
+numComments=3
