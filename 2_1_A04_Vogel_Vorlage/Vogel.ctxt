@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Vogel
-comment0.text=\r\n\ Klasse\ zur\ Darstellung\ eines\ Vogels\r\n\ \r\n\ @author\ Klaus\ Reinold\ \r\n\ @version\ 1.0\r\n
+comment0.text=\n\ Klasse\ zur\ Darstellung\ eines\ Vogels\n\ \n\ @author\ Klaus\ Reinold\ \n\ @version\ 1.0\n
 comment1.params=
 comment1.target=void\ Fl\u00FCgelObenZeichnen()
-comment1.text=\r\n\ Darstellung\ Fl\u00FCgel\ oben\r\n
+comment1.text=\n\ Darstellung\ Fl\u00FCgel\ oben\n
 comment2.params=
 comment2.target=void\ Fl\u00FCgelUntenZeichnen()
-comment2.text=\r\n\ Darstellung\ Fl\u00FCgel\ unten\r\n
+comment2.text=\n\ Darstellung\ Fl\u00FCgel\ unten\n
 comment3.params=
 comment3.target=void\ Fl\u00FCgelMitteZeichnen()
-comment3.text=\r\n\ Darstellung\ Fl\u00FCgel\ mittig\r\n
+comment3.text=\n\ Darstellung\ Fl\u00FCgel\ mittig\n
 comment4.params=
 comment4.target=void\ AktionAusf\u00FChren()
-comment4.text=\r\n\ Aktionsmethode,\ die\ taktgesteuert\ aufgerufen\ wird\r\n
+comment4.text=\n\ Aktionsmethode,\ die\ taktgesteuert\ aufgerufen\ wird\n
 numComments=5

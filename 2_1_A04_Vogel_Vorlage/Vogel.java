@@ -12,6 +12,10 @@ class Vogel extends Figur
      */
     int phase;
 
+    public Vogel() {
+        FlügelMitteZeichnen();
+    }
+
     /**
      * Darstellung Flügel oben
      */
