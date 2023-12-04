@@ -7,7 +7,7 @@
  */
 class Vogel extends Figur
 {
-    
+    int currentFrame=1;
     /**
      * Darstellung Flügel oben
      */
@@ -211,6 +211,27 @@ class Vogel extends Figur
         y2 = y2 + verschiebung;
         y3 = y3 + verschiebung;
         FigurteilFestlegenDreieck(x1, y1, x2, y2, x3, y3, "grau");
+    }
+
+    @Override void AktionAusführen() {
+        switch(currentFrame) {
+            case 1:
+                FlügelMitteZeichnen();
+                currentFrame = 2;
+                break;
+            case 2:
+                FlügelObenZeichnen();
+                currentFrame = 3;
+                break;
+            case 3:
+                FlügelMitteZeichnen();
+                currentFrame = 4;
+                break;
+            case 4:
+                FlügelUntenZeichnen();
+                currentFrame = 1;
+                break;
+        }
     }
 
 }

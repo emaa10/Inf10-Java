@@ -14,7 +14,12 @@ class Vogel extends Figur
      */
     void VogelFlügelObenZeichnen()
     {
-       //Hier die verschiedenen Figurteile ergänzen.
+       FigurteilFestlegenEllipse(-35, -15, 50, 30, "schwarz");
+       FigurteilFestlegenDreieck(-30, -25, -20, 0, 0, 0, "grau");
+       FigurteilFestlegenDreieck(-20, 0, 0, 0, 10, -25, "grau");
+       FigurteilFestlegenEllipse(10, -30, 30, 30, "schwarz");
+       FigurteilFestlegenEllipse(29, -29, 1, 1, "grau");
+       FigurteilFestlegenDreieck(40, -20, 40, -10, 50, -15, "orange");
     }
 
 
