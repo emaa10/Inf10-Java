@@ -71,7 +71,6 @@ class Bild
                         break;
                 }
             }
-            
         }
 
     }
