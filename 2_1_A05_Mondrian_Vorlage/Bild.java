@@ -40,20 +40,9 @@ class Bild
             default: return null;
         }
     }
-    
-    /**
-     * Methode zum Zeichnen eines Bildes
-     */
-    void BildZeichnen(int anzahlRechtecke)
-    {
+    void neuesRechteck() {
         String farbe;
-        anzahlRot = 0;
-        anzahlGelb = 0;
-        anzahlBlau = 0;
-        anzahlSchwarz = 0;
-
-        for(int i=0; i<anzahlRechtecke; i++) {
-            farbe = this.FarbeGeben();
+        farbe = this.FarbeGeben();
             new RechteckMondrian(farbe);
             switch(farbe) {
                 case "rot":
@@ -69,23 +58,22 @@ class Bild
                     anzahlSchwarz += 1;
                     break;
             }
+    }
+    
+    /**
+     * Methode zum Zeichnen eines Bildes
+     */
+    void BildZeichnen(int anzahlRechtecke)
+    {
+        anzahlRot = 0;
+        anzahlGelb = 0;
+        anzahlBlau = 0;
+        anzahlSchwarz = 0;
+
+        for(int i=0; i<anzahlRechtecke; i++) {
+            neuesRechteck(); 
             while(anzahlRot == 0 || anzahlGelb == 0 || anzahlBlau == 0 || anzahlSchwarz == 0) {
-                farbe = this.FarbeGeben();
-                new RechteckMondrian(farbe);
-                switch(farbe) {
-                    case "rot":
-                        anzahlRot += 1;
-                        break;
-                    case "gelb":
-                        anzahlGelb += 1;
-                        break;
-                    case "blau":
-                        anzahlBlau += 1;
-                        break;
-                    case "schwarz":
-                        anzahlSchwarz += 1;
-                        break;
-                }
+                neuesRechteck();
             }
         }
 
