@@ -53,22 +53,6 @@ class Bild
         anzahlSchwarz = 0;
 
         for(int i=0; i<anzahlRechtecke; i++) {
-            farbe = this.FarbeGeben();
-            new RechteckMondrian(farbe);
-            switch(farbe) {
-                case "rot":
-                    anzahlRot += 1;
-                    break;
-                case "gelb":
-                    anzahlGelb += 1;
-                    break;
-                case "blau":
-                    anzahlBlau += 1;
-                    break;
-                case "schwarz":
-                    anzahlSchwarz += 1;
-                    break;
-            }
             while(anzahlRot == 0 || anzahlGelb == 0 || anzahlBlau == 0 || anzahlSchwarz == 0) {
                 farbe = this.FarbeGeben();
                 new RechteckMondrian(farbe);
@@ -87,6 +71,7 @@ class Bild
                         break;
                 }
             }
+            
         }
 
     }
