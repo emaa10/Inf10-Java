@@ -1,33 +1,25 @@
+public class karte {
+    private String vorderseite;
+    private String rückseite;
 
-/**
- * Beschreiben Sie hier die Klasse karte.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
-public class karte
-{
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
-    /**
-     * Konstruktor für Objekte der Klasse karte
-     */
-    public karte()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
+    public karte(String newVorderseite, String newRückseite) {
+        vorderseite = newVorderseite;
+        rückseite = newRückseite;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
+    public String getVorderseite() {
+        return vorderseite;
+    }
+
+    public String getRückseite() {
+        return rückseite;
+    }
+
+    public void setVorderseite(String newVorderseite) {
+        vorderseite = newVorderseite;
+    }
+
+    public void setRückseite(String newRückseite) {
+        rückseite = newRückseite;
     }
 }
