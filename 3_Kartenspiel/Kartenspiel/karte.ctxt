@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=karte
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ karte.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
-comment1.params=
-comment1.target=karte()
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ karte\n
-comment2.params=y
-comment2.target=int\ beispielMethode(int)
-comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
-numComments=3
+comment1.params=newVorderseite\ newR\u00FCckseite
+comment1.target=karte(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getVorderseite()
+comment3.params=
+comment3.target=java.lang.String\ getR\u00FCckseite()
+comment4.params=newVorderseite
+comment4.target=void\ setVorderseite(java.lang.String)
+comment5.params=newR\u00FCckseite
+comment5.target=void\ setR\u00FCckseite(java.lang.String)
+numComments=6
