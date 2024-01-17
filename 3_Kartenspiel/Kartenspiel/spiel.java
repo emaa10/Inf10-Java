@@ -35,6 +35,7 @@ public class spiel {
                 punkteSpieler += 1;
             }
         }
+        System.out.println("PunkteSpieler: " + punkteSpieler + " PunkteDealer: " + punkteDealer);
     }
 
 }
