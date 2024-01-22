@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=void\ createCards()
 comment3.params=count
 comment3.target=void\ countCards(int)
-numComments=4
+comment4.params=nextInt
+comment4.target=int\ randomNumber(int)
+numComments=5
