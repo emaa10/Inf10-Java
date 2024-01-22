@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=karte
+comment0.target=card
 comment1.params=newVorderseite\ newR\u00FCckseite
-comment1.target=karte(java.lang.String,\ java.lang.String)
+comment1.target=card(java.lang.String,\ java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ getVorderseite()
 comment3.params=

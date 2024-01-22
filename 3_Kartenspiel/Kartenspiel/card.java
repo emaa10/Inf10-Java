@@ -1,9 +1,9 @@
 
-public class karte {
+public class card {
     private String vorderseite;
     private String rückseite;
 
-    public karte(String newVorderseite, String newRückseite) {
+    public card(String newVorderseite, String newRückseite) {
         vorderseite = newVorderseite;
         rückseite = newRückseite;
     }

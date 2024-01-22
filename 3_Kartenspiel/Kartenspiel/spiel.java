@@ -1,10 +1,10 @@
 import java.util.Random;
 
 public class spiel {
-    private karte karte1; // Vorder- und Rückseite mit Baum
-    private karte karte2; // Vorderseite Baum, Rückseite leer
-    private karte karte3; // Vorderseite und Rückseite leer
-    private karte gezogen;
+    private card card1; // Vorder- und Rückseite mit Baum
+    private card card2; // Vorderseite Baum, Rückseite leer
+    private card card3; // Vorderseite und Rückseite leer
+    private card gezogen;
     private String seiteOben;
     private int punkteSpieler;
     private int punkteDealer;
@@ -14,17 +14,17 @@ public class spiel {
     }
     
     public void createCards() {
-        karte1 = new karte("Baum", "Baum");
-        karte2 = new karte("Baum", "leer");
-        karte3 = new karte("leer", "leer");
+        card1 = new card("Baum", "Baum");
+        card2 = new card("Baum", "leer");
+        card3 = new card("leer", "leer");
     }
 
     public void draw() {
         int zahl = randomNumber(2);
         switch(zahl) {
-            case 0: gezogen = karte1; break;
-            case 1: gezogen = karte2; break;
-            case 2: gezogen = karte3; break;
+            case 0: gezogen = card1; break;
+            case 1: gezogen = card2; break;
+            case 2: gezogen = card3; break;
         }
 
         zahl = randomNumber(1);
@@ -57,17 +57,17 @@ public class spiel {
     // public void countCards(int count) {
     //     for(int i=0;i<count;i++) {
     //         createCards();
-    //         if(karte1.getVorderseite() == karte1.getRückseite()) {
+    //         if(card1.getVorderseite() == card1.getRückseite()) {
     //             punkteDealer += 1;
     //         } else{
     //             punkteSpieler += 1;
     //         }            
-    //         if(karte2.getVorderseite() == karte2.getRückseite()) {
+    //         if(card2.getVorderseite() == card2.getRückseite()) {
     //             punkteDealer += 1;
     //         } else{
     //             punkteSpieler += 1;
     //         }            
-    //         if(karte3.getVorderseite() == karte3.getRückseite()) {
+    //         if(card3.getVorderseite() == card3.getRückseite()) {
     //             punkteDealer += 1;
     //         } else{
     //             punkteSpieler += 1;
