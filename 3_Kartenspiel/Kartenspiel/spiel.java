@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class spiel {
     private karte karte1; // Vorder- und Rückseite mit Baum
     private karte karte2; // Vorderseite Baum, Rückseite leer
@@ -36,6 +38,13 @@ public class spiel {
             }
         }
         System.out.println("PunkteSpieler: " + punkteSpieler + " PunkteDealer: " + punkteDealer);
+    }
+
+    public void randomNumber() {
+        Random generator;
+        generator = new Random();
+        int test = generator.nextInt(4) - 1;
+        System.out.println(test);
     }
 
 }

@@ -10,4 +10,6 @@ comment4.params=newVorderseite
 comment4.target=void\ setVorderseite(java.lang.String)
 comment5.params=newR\u00FCckseite
 comment5.target=void\ setR\u00FCckseite(java.lang.String)
-numComments=6
+comment6.params=
+comment6.target=void\ randomNumber()
+numComments=7

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class karte {
     private String vorderseite;
     private String rückseite;
@@ -21,5 +23,12 @@ public class karte {
 
     public void setRückseite(String newRückseite) {
         rückseite = newRückseite;
+    }
+    
+    public void randomNumber() {
+        Random generator;
+        generator = new Random();
+        int test = generator.nextInt(4) - 1;
+        System.out.println(test);
     }
 }
