@@ -8,11 +8,11 @@ public class card {
         rückseite = newRückseite;
     }
 
-    public String getVorderseite() {
+    public String getTopPage() {
         return vorderseite;
     }
 
-    public String getRückseite() {
+    public String getBottomPage() {
         return rückseite;
     }
 

@@ -4,10 +4,10 @@ public class spiel {
     private card card1; // Vorder- und Rückseite mit Baum
     private card card2; // Vorderseite Baum, Rückseite leer
     private card card3; // Vorderseite und Rückseite leer
-    private card gezogen;
-    private String seiteOben;
-    private int punkteSpieler;
-    private int punkteDealer;
+    private card drawn;
+    private String topPage;
+    private int pointsPlayer;
+    private int pointsDealer;
 
     public spiel() {
         createCards();
@@ -20,26 +20,26 @@ public class spiel {
     }
 
     public void draw() {
-        int zahl = randomNumber(2);
-        switch(zahl) {
-            case 0: gezogen = card1; break;
-            case 1: gezogen = card2; break;
-            case 2: gezogen = card3; break;
+        int number = randomNumber(2);
+        switch(number) {
+            case 0: drawn = card1; break;
+            case 1: drawn = card2; break;
+            case 2: drawn = card3; break;
         }
 
-        zahl = randomNumber(1);
+        number = randomNumber(1);
 
-        switch(zahl) {
-            case 0: seiteOben = gezogen.getVorderseite();
-            case 1: seiteOben = gezogen.getRückseite();
+        switch(number) {
+            case 0: topPage = drawn.getTopPage();
+            case 1: topPage = drawn.getBottomPage();
         }
-        System.out.println("Gezeigt wird: " + seiteOben + " und gezogen wurde: " + gezogen.getVorderseite() + " und " + gezogen.getRückseite());
+        System.out.println("Shown: " + topPage + " and: " + drawn.getTopPage() + " and " + drawn.getBottomPage() + " was drawn.");
 
-        if(gezogen.getVorderseite() == gezogen.getRückseite()) {
-            punkteDealer++;
+        if(drawn.getTopPage() == drawn.getBottomPage()) {
+            pointsDealer++;
             System.out.println("Dealer win");
         } else {
-            punkteSpieler++;
+            pointsPlayer++;
             System.out.println("Player win");
         }
 
@@ -49,8 +49,8 @@ public class spiel {
         for(int c=0;c<amount;c++) {
             draw();
         }
-        System.out.println("Dealer's points: " + punkteDealer + ", Player's points: " + punkteSpieler);
-        System.out.println(punkteDealer>punkteSpieler?"Dealer won!":"Player won!");
+        System.out.println("Dealer's points: " + pointsDealer + ", Player's points: " + pointsPlayer);
+        System.out.println(pointsDealer>pointsPlayer?"Dealer won!":"Player won!");
     }
 
 
@@ -58,22 +58,22 @@ public class spiel {
     //     for(int i=0;i<count;i++) {
     //         createCards();
     //         if(card1.getVorderseite() == card1.getRückseite()) {
-    //             punkteDealer += 1;
+    //             pointsDealer += 1;
     //         } else{
-    //             punkteSpieler += 1;
+    //             pointsPlayer += 1;
     //         }            
     //         if(card2.getVorderseite() == card2.getRückseite()) {
-    //             punkteDealer += 1;
+    //             pointsDealer += 1;
     //         } else{
-    //             punkteSpieler += 1;
+    //             pointsPlayer += 1;
     //         }            
     //         if(card3.getVorderseite() == card3.getRückseite()) {
-    //             punkteDealer += 1;
+    //             pointsDealer += 1;
     //         } else{
-    //             punkteSpieler += 1;
+    //             pointsPlayer += 1;
     //         }
     //     }
-    //     System.out.println("PunkteSpieler: " + punkteSpieler + " PunkteDealer: " + punkteDealer);
+    //     System.out.println("PunkteSpieler: " + pointsPlayer + " PunkteDealer: " + pointsDealer);
     // }
 
     public int randomNumber(int nextInt) { // random number von 0 bis nextInt
