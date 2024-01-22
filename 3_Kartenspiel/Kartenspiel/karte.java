@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class karte {
     private String vorderseite;
