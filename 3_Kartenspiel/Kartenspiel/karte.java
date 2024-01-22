@@ -25,10 +25,4 @@ public class karte {
         rückseite = newRückseite;
     }
     
-    public void randomNumber() {
-        Random generator;
-        generator = new Random();
-        int test = generator.nextInt(4) - 1;
-        System.out.println(test);
-    }
 }
