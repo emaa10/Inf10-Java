@@ -12,10 +12,18 @@ public class spiel {
     }
     
     public void createCards() {
-        karte1 = new karte("Baum", "Baum");
+        // karte 1
+        switch(randomNumber()) {
+            case 0:
+                karte1 = new karte("Baum", "Baum");
+            case 1:
+                karte1 = new karte("Baum", "leer");
+            case 2:
+                karte1 = new karte("leer", "leer");
+
+        }
         karte2 = new karte("Baum", "leer");
         karte3 = new karte("leer", "leer");
-
     }
 
     public void countCards(int count) {
@@ -40,11 +48,11 @@ public class spiel {
         System.out.println("PunkteSpieler: " + punkteSpieler + " PunkteDealer: " + punkteDealer);
     }
 
-    public void randomNumber() {
+    public int randomNumber() { // random number (0, 1 or 2)
         Random generator;
         generator = new Random();
-        int test = generator.nextInt(4) - 1;
-        System.out.println(test);
+        int number = generator.nextInt(4) - 1;
+        return number;
     }
 
 }
