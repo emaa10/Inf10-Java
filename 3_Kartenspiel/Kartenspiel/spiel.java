@@ -19,7 +19,7 @@ public class spiel {
         karte3 = new karte("leer", "leer");
     }
 
-    public void ziehen() {
+    public void draw() {
         int zahl = randomNumber(2);
         switch(zahl) {
             case 0: gezogen = karte1; break;
@@ -45,7 +45,14 @@ public class spiel {
 
     }
 
-    public String
+    public void drawMultiple(int amount) {
+        for(int c=0;c<amount;c++) {
+            draw();
+        }
+        System.out.println("Dealer's points: " + punkteDealer + ", Player's points: " + punkteSpieler);
+        System.out.println(punkteDealer>punkteSpieler?"Dealer won!":"Player won!");
+    }
+
 
     // public void countCards(int count) {
     //     for(int i=0;i<count;i++) {
