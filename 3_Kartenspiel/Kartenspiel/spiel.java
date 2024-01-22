@@ -30,31 +30,44 @@ public class spiel {
         zahl = randomNumber(1);
 
         switch(zahl) {
-            case 0: seiteOben
+            case 0: seiteOben = gezogen.getVorderseite();
+            case 1: seiteOben = gezogen.getRückseite();
         }
+        System.out.println("Gezeigt wird: " + seiteOben + " und gezogen wurde: " + gezogen.getVorderseite() + " und " + gezogen.getRückseite());
+
+        if(gezogen.getVorderseite() == gezogen.getRückseite()) {
+            punkteDealer++;
+            System.out.println("Dealer win");
+        } else {
+            punkteSpieler++;
+            System.out.println("Player win");
+        }
+
     }
 
-    public void countCards(int count) {
-        for(int i=0;i<count;i++) {
-            createCards();
-            if(karte1.getVorderseite() == karte1.getRückseite()) {
-                punkteDealer += 1;
-            } else{
-                punkteSpieler += 1;
-            }            
-            if(karte2.getVorderseite() == karte2.getRückseite()) {
-                punkteDealer += 1;
-            } else{
-                punkteSpieler += 1;
-            }            
-            if(karte3.getVorderseite() == karte3.getRückseite()) {
-                punkteDealer += 1;
-            } else{
-                punkteSpieler += 1;
-            }
-        }
-        System.out.println("PunkteSpieler: " + punkteSpieler + " PunkteDealer: " + punkteDealer);
-    }
+    public String
+
+    // public void countCards(int count) {
+    //     for(int i=0;i<count;i++) {
+    //         createCards();
+    //         if(karte1.getVorderseite() == karte1.getRückseite()) {
+    //             punkteDealer += 1;
+    //         } else{
+    //             punkteSpieler += 1;
+    //         }            
+    //         if(karte2.getVorderseite() == karte2.getRückseite()) {
+    //             punkteDealer += 1;
+    //         } else{
+    //             punkteSpieler += 1;
+    //         }            
+    //         if(karte3.getVorderseite() == karte3.getRückseite()) {
+    //             punkteDealer += 1;
+    //         } else{
+    //             punkteSpieler += 1;
+    //         }
+    //     }
+    //     System.out.println("PunkteSpieler: " + punkteSpieler + " PunkteDealer: " + punkteDealer);
+    // }
 
     public int randomNumber(int nextInt) { // random number von 0 bis nextInt
         Random generator;
