@@ -49,6 +49,7 @@ public class spiel {
         for(int c=0;c<amount;c++) {
             draw();
         }
+        System.out.println("---------");
         System.out.println("Dealer's points: " + pointsDealer + ", Player's points: " + pointsPlayer);
         System.out.println(pointsDealer>pointsPlayer?"Dealer won!":"Player won!");
     }
