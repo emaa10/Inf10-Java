@@ -1,17 +1,18 @@
-public class karte {
+
+public class card {
     private String vorderseite;
     private String rückseite;
 
-    public karte(String newVorderseite, String newRückseite) {
+    public card(String newVorderseite, String newRückseite) {
         vorderseite = newVorderseite;
         rückseite = newRückseite;
     }
 
-    public String getVorderseite() {
+    public String getTopPage() {
         return vorderseite;
     }
 
-    public String getRückseite() {
+    public String getBottomPage() {
         return rückseite;
     }
 
@@ -22,4 +23,5 @@ public class karte {
     public void setRückseite(String newRückseite) {
         rückseite = newRückseite;
     }
+    
 }
