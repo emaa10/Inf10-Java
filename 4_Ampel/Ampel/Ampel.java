@@ -4,6 +4,7 @@ public class Ampel
     private Lampe lampeOben;
     private Lampe lampeMitte;
     private Lampe lampeUnten;
+    private int currentState = 0;
 
     public Ampel()
     {
@@ -26,7 +27,7 @@ public class Ampel
 
     public void grünSetzen() {
         lampeOben.farbeSetzen("Schwarz");
-        lampeMitte.farbeSetzen("Schwarz")
+        lampeMitte.farbeSetzen("Schwarz");
         lampeUnten.farbeSetzen("Grün");
     }
 
@@ -34,6 +35,10 @@ public class Ampel
         lampeOben.farbeSetzen("Schwarz");
         lampeMitte.farbeSetzen("Gelb");
         lampeUnten.farbeSetzen("Schwarz");
+    }
+
+    public void weiterSchalten() {
+        switch(currentState)
     }
 
     
