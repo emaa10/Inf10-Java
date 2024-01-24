@@ -5,11 +5,20 @@ public class Ampel
     private Lampe lampeMitte;
     private Lampe lampeUnten;
 
-    public String farbe = "Rot";
-    public Ampel(String newFarbe)
+    public Ampel()
     {
-        farbe = newFarbe;
+        lampeOben = new Lampe("Rot");
+        lampeMitte = new Lampe("Schwarz");
+        lampeUnten = new Lampe("Schwarz");
     }
+
+    public void rotSetzen() {
+        lampeOben.farbeSetzen("Rot");
+        lampeMitte.farbeSetzen("Schwarz");
+        lampeUnten.farbeSetzen("Schwarz");
+    }
+
+    
 
     
 }
