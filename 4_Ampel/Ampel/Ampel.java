@@ -18,6 +18,24 @@ public class Ampel
         lampeUnten.farbeSetzen("Schwarz");
     }
 
+    public void rotGelbSetzen() {
+        lampeOben.farbeSetzen("Rot");
+        lampeMitte.farbeSetzen("Gelb");
+        lampeUnten.farbeSetzen("Schwarz");
+    }
+
+    public void grünSetzen() {
+        lampeOben.farbeSetzen("Schwarz");
+        lampeMitte.farbeSetzen("Schwarz")
+        lampeUnten.farbeSetzen("Grün");
+    }
+
+    public void gelbSetzen() {
+        lampeOben.farbeSetzen("Schwarz");
+        lampeMitte.farbeSetzen("Gelb");
+        lampeUnten.farbeSetzen("Schwarz");
+    }
+
     
 
     
