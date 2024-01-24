@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Lampe
+comment1.params=newFarbe
+comment1.target=Lampe(java.lang.String)
+comment2.params=newFarbe
+comment2.target=void\ farbeSetzen(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ farbeGeben()
+numComments=4
