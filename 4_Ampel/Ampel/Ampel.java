@@ -11,6 +11,11 @@ public class Ampel
         lampeOben = new Lampe(true);    //rot
         lampeMitte = new Lampe(false);
         lampeUnten = new Lampe(false);
+        System.out.println("Lampe Oben: " + (lampeOben.statusGeben()?"An":"Aus"));
+        System.out.println("Lampe Mitte: " + (lampeMitte.statusGeben()?"An":"Aus"));
+        System.out.println("Lampe Unten: " + (lampeUnten.statusGeben()?"An":"Aus"));
+        System.out.println("Ampelphase: " + ampelPhase);
+        System.out.println("------");
     }
 
     public void rotSetzen() {
@@ -59,6 +64,7 @@ public class Ampel
         System.out.println("Lampe Oben: " + (lampeOben.statusGeben()?"An":"Aus"));
         System.out.println("Lampe Mitte: " + (lampeMitte.statusGeben()?"An":"Aus"));
         System.out.println("Lampe Unten: " + (lampeUnten.statusGeben()?"An":"Aus"));
+        System.out.println("Ampelphase: " + ampelPhase);
         System.out.println("------");
     }
 
