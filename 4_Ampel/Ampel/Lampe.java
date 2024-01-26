@@ -2,17 +2,17 @@
 public class Lampe
 {
     
-    public String farbe;
+    public boolean status;
     
-    public Lampe(String newFarbe) {
-        farbe = newFarbe;
+    public Lampe(boolean newStatus) {
+        status = newStatus;
     }
 
 
-    public void farbeSetzen(String newFarbe) {
-        farbe = newFarbe;
+    public void statusSetzen(boolean newStatus) {
+        status = newStatus;
     }
-    public String farbeGeben() {
-        return farbe;
+    public boolean statusGeben() {
+        return status;
     }
 }

@@ -1,44 +1,65 @@
 
 public class Ampel
 {
-    private Lampe lampeOben;
-    private Lampe lampeMitte;
-    private Lampe lampeUnten;
-    private int currentState = 0;
+    private Lampe lampeOben; //rot
+    private Lampe lampeMitte;//gelb
+    private Lampe lampeUnten;//grün
+    private String ampelPhase = "rot";
 
     public Ampel()
     {
-        lampeOben = new Lampe("Rot");
-        lampeMitte = new Lampe("Schwarz");
-        lampeUnten = new Lampe("Schwarz");
+        lampeOben = new Lampe(true);    //rot
+        lampeMitte = new Lampe(false);
+        lampeUnten = new Lampe(false);
     }
 
     public void rotSetzen() {
-        lampeOben.farbeSetzen("Rot");
-        lampeMitte.farbeSetzen("Schwarz");
-        lampeUnten.farbeSetzen("Schwarz");
+        lampeOben.statusSetzen(true);
+        lampeMitte.statusSetzen(false);
+        lampeUnten.statusSetzen(false);
     }
 
     public void rotGelbSetzen() {
-        lampeOben.farbeSetzen("Rot");
-        lampeMitte.farbeSetzen("Gelb");
-        lampeUnten.farbeSetzen("Schwarz");
+        lampeOben.statusSetzen(true);
+        lampeMitte.statusSetzen(true);
+        lampeUnten.statusSetzen(false);
     }
 
     public void grünSetzen() {
-        lampeOben.farbeSetzen("Schwarz");
-        lampeMitte.farbeSetzen("Schwarz");
-        lampeUnten.farbeSetzen("Grün");
+        lampeOben.statusSetzen(false);
+        lampeMitte.statusSetzen(false);
+        lampeUnten.statusSetzen(true);
     }
 
     public void gelbSetzen() {
-        lampeOben.farbeSetzen("Schwarz");
-        lampeMitte.farbeSetzen("Gelb");
-        lampeUnten.farbeSetzen("Schwarz");
+        lampeOben.statusSetzen(false);
+        lampeMitte.statusSetzen(true);
+        lampeUnten.statusSetzen(false);
     }
 
     public void weiterSchalten() {
-        switch(currentState)
+        switch(ampelPhase) {
+            case "rot":
+                ampelPhase = "rotgelb";
+                rotGelbSetzen();
+                break;
+            case "rotgelb":
+                ampelPhase = "grün";
+                grünSetzen();
+                break;
+            case "grün":
+                ampelPhase = "gelb";
+                gelbSetzen();
+                break;
+            case "gelb":
+                ampelPhase = "rot";
+                rotSetzen();
+                break;
+        }
+        System.out.println("Lampe Oben: " + (lampeOben.statusGeben()?"An":"Aus"));
+        System.out.println("Lampe Mitte: " + (lampeMitte.statusGeben()?"An":"Aus"));
+        System.out.println("Lampe Unten: " + (lampeUnten.statusGeben()?"An":"Aus"));
+        System.out.println("------");
     }
 
     
