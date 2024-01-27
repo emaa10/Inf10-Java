@@ -1,4 +1,3 @@
-
 public class Lampe
 {
     public boolean status;

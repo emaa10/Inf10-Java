@@ -68,7 +68,4 @@ public class Ampel
         printStatus();
     }
 
-    
-
-    
 }
