@@ -9,10 +9,10 @@ public class Lampe
     }
 
 
-    public void statusSetzen(boolean newStatus) {
+    public void setStatus(boolean newStatus) {
         status = newStatus;
     }
-    public boolean statusGeben() {
+    public boolean getStatus() {
         return status;
     }
 }
