@@ -1,47 +1,45 @@
-
 public class Ampel
 {
-    private Lampe lampeOben; //rot
-    private Lampe lampeMitte;//gelb
-    private Lampe lampeUnten;//grün
-    // private String ampelPhase = "rot";
+    private Lampe lampeRot;
+    private Lampe lampeGelb;
+    private Lampe lampeGrün;
     enum ampelFarben {ROT, ROTGELB, GRÜN, GELB}
     ampelFarben ampelPhase = ampelFarben.ROT;
 
     public Ampel()
     {
-        lampeOben = new Lampe(true);    //rot
-        lampeMitte = new Lampe(false);
-        lampeUnten = new Lampe(false);
-        System.out.println("Lampe Oben: " + (lampeOben.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Mitte: " + (lampeMitte.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Unten: " + (lampeUnten.getStatus()?"An":"Aus"));
+        lampeRot = new Lampe(true);    //rot
+        lampeGelb = new Lampe(false);
+        lampeGrün = new Lampe(false);
+        System.out.println("Lampe Oben: " + (lampeRot.getStatus()?"An":"Aus"));
+        System.out.println("Lampe Mitte: " + (lampeGelb.getStatus()?"An":"Aus"));
+        System.out.println("Lampe Unten: " + (lampeGrün.getStatus()?"An":"Aus"));
         System.out.println("Ampelphase: " + ampelPhase);
         System.out.println("------");
     }
 
     public void rotSetzen() {
-        lampeOben.setStatus(true);
-        lampeMitte.setStatus(false);
-        lampeUnten.setStatus(false);
+        lampeRot.setStatus(true);
+        lampeGelb.setStatus(false);
+        lampeGrün.setStatus(false);
     }
 
     public void rotGelbSetzen() {
-        lampeOben.setStatus(true);
-        lampeMitte.setStatus(true);
-        lampeUnten.setStatus(false);
+        lampeRot.setStatus(true);
+        lampeGelb.setStatus(true);
+        lampeGrün.setStatus(false);
     }
 
     public void grünSetzen() {
-        lampeOben.setStatus(false);
-        lampeMitte.setStatus(false);
-        lampeUnten.setStatus(true);
+        lampeRot.setStatus(false);
+        lampeGelb.setStatus(false);
+        lampeGrün.setStatus(true);
     }
 
     public void gelbSetzen() {
-        lampeOben.setStatus(false);
-        lampeMitte.setStatus(true);
-        lampeUnten.setStatus(false);
+        lampeRot.setStatus(false);
+        lampeGelb.setStatus(true);
+        lampeGrün.setStatus(false);
     }
 
     public void weiterSchalten() {
@@ -63,9 +61,9 @@ public class Ampel
                 rotSetzen();
                 break;
         }
-        System.out.println("Lampe Oben: " + (lampeOben.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Mitte: " + (lampeMitte.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Unten: " + (lampeUnten.getStatus()?"An":"Aus"));
+        System.out.println("Lampe Oben: " + (lampeRot.getStatus()?"An":"Aus"));
+        System.out.println("Lampe Mitte: " + (lampeGelb.getStatus()?"An":"Aus"));
+        System.out.println("Lampe Unten: " + (lampeGrün.getStatus()?"An":"Aus"));
         System.out.println("Ampelphase: " + ampelPhase);
         System.out.println("------");
     }

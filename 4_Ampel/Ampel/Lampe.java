@@ -1,7 +1,6 @@
 
 public class Lampe
 {
-    
     public boolean status;
     
     public Lampe(boolean newStatus) {
