@@ -1,19 +1,23 @@
 public class Ampel
 {
-    private Lampe lampeRot;
-    private Lampe lampeGelb;
-    private Lampe lampeGrün;
+    private Lampe lampeRot;  //oben
+    private Lampe lampeGelb; //mitte 
+    private Lampe lampeGrün; //unten
     enum ampelFarben {ROT, ROTGELB, GRÜN, GELB}
     ampelFarben ampelPhase = ampelFarben.ROT;
 
     public Ampel()
     {
-        lampeRot = new Lampe(true);    //rot
+        lampeRot = new Lampe(true);
         lampeGelb = new Lampe(false);
         lampeGrün = new Lampe(false);
-        System.out.println("Lampe Oben: " + (lampeRot.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Mitte: " + (lampeGelb.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Unten: " + (lampeGrün.getStatus()?"An":"Aus"));
+        printStatus();
+    }
+    
+    public void printStatus() {
+        System.out.println("Lampe Oben: " + (lampeRot.getStatus()?"🔴":"⚫"));
+        System.out.println("Lampe Mitte: " + (lampeGelb.getStatus()?"🟡":"⚫"));
+        System.out.println("Lampe Unten: " + (lampeGrün.getStatus()?"🟢":"⚫"));
         System.out.println("Ampelphase: " + ampelPhase);
         System.out.println("------");
     }
@@ -61,11 +65,7 @@ public class Ampel
                 rotSetzen();
                 break;
         }
-        System.out.println("Lampe Oben: " + (lampeRot.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Mitte: " + (lampeGelb.getStatus()?"An":"Aus"));
-        System.out.println("Lampe Unten: " + (lampeGrün.getStatus()?"An":"Aus"));
-        System.out.println("Ampelphase: " + ampelPhase);
-        System.out.println("------");
+        printStatus();
     }
 
     

@@ -7,7 +7,6 @@ public class Lampe
         status = newStatus;
     }
 
-
     public void setStatus(boolean newStatus) {
         status = newStatus;
     }
