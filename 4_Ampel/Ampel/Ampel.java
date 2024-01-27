@@ -1,68 +1,68 @@
 public class Ampel
 {
-    private Lampe lampeRot;  //oben
-    private Lampe lampeGelb; //mitte 
-    private Lampe lampeGrün; //unten
-    enum ampelFarben {ROT, ROTGELB, GRÜN, GELB}
-    ampelFarben ampelPhase = ampelFarben.ROT;
+    private Lampe lampRed;    //oben
+    private Lampe lampYellow; //mitte 
+    private Lampe lampGreen;  //unten
+    enum lightColors {RED, REDYELLOW, GREEN, YELLOW}
+    lightColors TLPhase = lightColors.RED;
 
     public Ampel()
     {
-        lampeRot = new Lampe(true);
-        lampeGelb = new Lampe(false);
-        lampeGrün = new Lampe(false);
+        lampRed = new Lampe(true);
+        lampYellow = new Lampe(false);
+        lampGreen = new Lampe(false);
         printStatus();
     }
     
     public void printStatus() {
-        System.out.println("Lampe Oben: " + (lampeRot.getStatus()?"🔴":"⚫"));
-        System.out.println("Lampe Mitte: " + (lampeGelb.getStatus()?"🟡":"⚫"));
-        System.out.println("Lampe Unten: " + (lampeGrün.getStatus()?"🟢":"⚫"));
-        System.out.println("Ampelphase: " + ampelPhase);
+        System.out.println("Lampe Oben: " + (lampRed.getStatus()?"🔴":"⚫"));
+        System.out.println("Lampe Mitte: " + (lampYellow.getStatus()?"🟡":"⚫"));
+        System.out.println("Lampe Unten: " + (lampGreen.getStatus()?"🟢":"⚫"));
+        System.out.println("Ampelphase: " + TLPhase);
         System.out.println("------");
     }
 
-    public void rotSetzen() {
-        lampeRot.setStatus(true);
-        lampeGelb.setStatus(false);
-        lampeGrün.setStatus(false);
+    public void setRed() {
+        lampRed.setStatus(true);
+        lampYellow.setStatus(false);
+        lampGreen.setStatus(false);
     }
 
-    public void rotGelbSetzen() {
-        lampeRot.setStatus(true);
-        lampeGelb.setStatus(true);
-        lampeGrün.setStatus(false);
+    public void setRedYellow() {
+        lampRed.setStatus(true);
+        lampYellow.setStatus(true);
+        lampGreen.setStatus(false);
     }
 
-    public void grünSetzen() {
-        lampeRot.setStatus(false);
-        lampeGelb.setStatus(false);
-        lampeGrün.setStatus(true);
+    public void setGreen() {
+        lampRed.setStatus(false);
+        lampYellow.setStatus(false);
+        lampGreen.setStatus(true);
     }
 
-    public void gelbSetzen() {
-        lampeRot.setStatus(false);
-        lampeGelb.setStatus(true);
-        lampeGrün.setStatus(false);
+    public void setYellow() {
+        lampRed.setStatus(false);
+        lampYellow.setStatus(true);
+        lampGreen.setStatus(false);
     }
 
     public void weiterSchalten() {
-        switch(ampelPhase) {
-            case ROT:
-                ampelPhase = ampelFarben.ROTGELB;
-                rotGelbSetzen();
+        switch(TLPhase) {
+            case RED:
+                TLPhase = lightColors.REDYELLOW;
+                setRedYellow();
                 break;
-            case ROTGELB:
-                ampelPhase = ampelFarben.GRÜN;
-                grünSetzen();
+            case REDYELLOW:
+                TLPhase = lightColors.GREEN;
+                setGreen();
                 break;
-            case GRÜN:
-                ampelPhase = ampelFarben.GELB;
-                gelbSetzen();
+            case GREEN:
+                TLPhase = lightColors.YELLOW;
+                setYellow();
                 break;
-            case GELB:
-                ampelPhase = ampelFarben.ROT;
-                rotSetzen();
+            case YELLOW:
+                TLPhase = lightColors.RED;
+                setRed();
                 break;
         }
         printStatus();
