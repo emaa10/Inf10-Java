@@ -1,13 +1,14 @@
 public class Haus
 {
     private Rechteck rechteck1;
+    private Rechteck rechteck2;
     private Dreieck dreieck;
-    //Aufgabe 2: Füge ein neues Rechteck Attribut für eine Tür ein
     
     //Konstruktor
     public Haus(){
        //Objekte erstellen und in rechteck und dreieck speichern
        rechteck1=new Rechteck();
+       rechteck2=new Rechteck();
        dreieck=new Dreieck();
        //Aufgabe 3: Erstelle ein neues Rechteck Objekt und speichere es im passenden Attribut
        
@@ -16,6 +17,10 @@ public class Haus
        rechteck1.FarbeSetzen("blau");
        dreieck.FarbeSetzen("rot");
        rechteck1.Verschieben(0,100);
+       rechteck2.FarbeSetzen("schwarz");
+       rechteck2.Verschieben(25,150);
+       rechteck2.GrößeSetzen(50,50);
+       rechteck2.GanzNachVornBringen();
        
        //Aufgabe 4: Färbe die Tür grün, mache sie über GrößeSetzen(int, int) kleiner und verschiebe sie an die richtige Stelle
     }
