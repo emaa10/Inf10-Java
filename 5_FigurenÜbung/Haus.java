@@ -1,4 +1,3 @@
-//Aufgabe 1: Erstelle ein Haus Objekt und schaue dir an wie es aussieht
 public class Haus
 {
     private Rechteck rechteck1;
