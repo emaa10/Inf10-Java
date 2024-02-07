@@ -31,4 +31,11 @@ class Berge extends Figur
         y3 = -50;
         FigurteilFestlegenDreieck(x1, y1, x2, y2, x3, y3, "grau");
     }
+
+    public void Bewegen() {
+        PositionSetzen(XPositionGeben() - 5, YPositionGeben());
+        if(XPositionGeben()<-100) {
+            PositionSetzen(900, YPositionGeben());
+        }
+    }
 }

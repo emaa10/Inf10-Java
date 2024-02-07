@@ -4,4 +4,6 @@ comment0.text=\n\ Klasse\ zur\ Beschreibung\ eines\ Gebirges.\n\ \n\ @author\ Kl
 comment1.params=
 comment1.target=Berge()
 comment1.text=\n\ Konstruktor\ der\ Berge\n
-numComments=2
+comment2.params=
+comment2.target=void\ Bewegen()
+numComments=3

@@ -239,4 +239,12 @@ class Insekt extends Figur
         }
 
     }
+
+    public void Bewegen() {
+        PositionSetzen(XPositionGeben() - 5, YPositionGeben());
+
+        if(XPositionGeben()<-100) {
+            PositionSetzen(900, YPositionGeben());
+        }
+    }
 }
