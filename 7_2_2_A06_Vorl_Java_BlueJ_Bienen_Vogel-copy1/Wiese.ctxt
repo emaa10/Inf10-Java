@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Wiese
-comment0.text=\r\n\ Die\ Wiese\r\n\ \r\n\ @author\ Klaus\ Reinold\ \r\n\ @version\ 1.0\r\n
+comment0.text=\n\ Die\ Wiese\n\ \n\ @author\ Klaus\ Reinold\ \n\ @version\ 1.0\n
 comment1.params=
 comment1.target=Wiese()
-comment1.text=\r\n\ Konstruktor\ der\ Wiese\r\n
+comment1.text=\n\ Konstruktor\ der\ Wiese\n
 numComments=2
