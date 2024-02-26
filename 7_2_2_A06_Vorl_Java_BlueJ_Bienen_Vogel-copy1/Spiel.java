@@ -1,5 +1,3 @@
-
-
 public class Spiel extends Ereignisbehandlung
 {
   private Berge berg1;
@@ -32,5 +30,7 @@ public class Spiel extends Ereignisbehandlung
   public void TaktImpulsAusführen(){
       berg1.Bewegen();
       insekt1.Bewegen();
+      berg2.Bewegen();
+      insekt2.Bewegen();
   }
 }
