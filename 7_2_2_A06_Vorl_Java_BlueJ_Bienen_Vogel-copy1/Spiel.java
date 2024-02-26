@@ -10,6 +10,8 @@ public class Spiel extends Ereignisbehandlung
   private char taste;
   public Text gameover;
   public Text restart;
+  public Text punkteText;
+  public int punkte = 0;
  
   
   
@@ -23,6 +25,12 @@ public class Spiel extends Ereignisbehandlung
     insekt2 = new Insekt(1);
     gameover = new Text();
     restart = new Text();
+    punkteText = new Text();
+    punkteText.SichtbarkeitSetzen(true);
+    punkteText.PositionSetzen(750, 50);
+    punkteText.TextGrößeSetzen(35);
+    punkteText.TextSetzen("0");
+    punkteText.FarbeSetzen("gelb");
     gameover.SichtbarkeitSetzen(false);
     restart.SichtbarkeitSetzen(false);
     berg1.PositionSetzen(270, 315);
@@ -58,12 +66,15 @@ public class Spiel extends Ereignisbehandlung
       berg2.Bewegen();
       insekt2.Bewegen();
 
+      punkteText.TextSetzen(String.valueOf(punkte));
+
       // insekt logic
-      if(insekt1.Berührt(vogel1)) { insekt1.PositionSetzen(810, 192); }
-      if(insekt2.Berührt(vogel1)) { insekt2.PositionSetzen(810, 50);  }
+      if(insekt1.Berührt(vogel1)) { insekt1.PositionSetzen(810, 192); punkte += 5;}
+      if(insekt2.Berührt(vogel1)) { insekt2.PositionSetzen(810, 50);  punkte += 5;}
 
       // berg logic
       if(berg1.Berührt(vogel1)) { 
+        punkte = 0;
 
         gameover.TextSetzen("GAME OVER");
         gameover.GanzNachVornBringen();

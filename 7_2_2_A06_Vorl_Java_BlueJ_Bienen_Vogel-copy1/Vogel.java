@@ -251,7 +251,7 @@ class Vogel extends Figur
             break;
         }
         
-        PositionSetzen(XPositionGeben(), YPositionGeben()+3);
+        PositionSetzen(XPositionGeben(), YPositionGeben()+6);
     }
     
     
