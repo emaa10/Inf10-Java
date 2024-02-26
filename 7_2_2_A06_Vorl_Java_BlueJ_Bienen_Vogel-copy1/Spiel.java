@@ -7,6 +7,9 @@ public class Spiel extends Ereignisbehandlung
   private Vogel vogel1;
   private Berge berg2;
   private Insekt insekt2;
+  private char taste;
+  public Text gameover;
+  public Text restart;
  
   
   
@@ -18,19 +21,65 @@ public class Spiel extends Ereignisbehandlung
     vogel1 = new Vogel();
     berg2 = new Berge();
     insekt2 = new Insekt(1);
+    gameover = new Text();
+    restart = new Text();
+    gameover.SichtbarkeitSetzen(false);
+    restart.SichtbarkeitSetzen(false);
     berg1.PositionSetzen(270, 315);
-    insekt1.PositionSetzen(435, 192);
-    berg2.PositionSetzen(533, 400);
-    insekt2.PositionSetzen(637, 221);
+    insekt1.PositionSetzen(300, 192);
+    berg2.PositionSetzen(700, 315);
+    insekt2.PositionSetzen(637, 50);
     wiese1.NachHintenBringen();
     himmel1.NachHintenBringen();
       
   }
+  
+  @Override
+  public void TasteGedrückt (char taste) {
+    this.taste = taste;
+    System.out.println(taste);
+    if(taste == 'r') {
+      berg1.PositionSetzen(270, 315);
+      insekt1.PositionSetzen(300, 192);
+      berg2.PositionSetzen(700, 315);
+      insekt2.PositionSetzen(637, 50);
+      vogel1.PositionSetzen(93, 212);
+      gameover.SichtbarkeitSetzen(false);
+      restart.SichtbarkeitSetzen(false);
+      Zeichenfenster.TaktgeberStarten();
+
+    }
+  }
+
   @Override
   public void TaktImpulsAusführen(){
       berg1.Bewegen();
       insekt1.Bewegen();
       berg2.Bewegen();
       insekt2.Bewegen();
+
+      // insekt logic
+      if(insekt1.Berührt(vogel1)) { insekt1.PositionSetzen(810, 192); }
+      if(insekt2.Berührt(vogel1)) { insekt2.PositionSetzen(810, 50);  }
+
+      // berg logic
+      if(berg1.Berührt(vogel1)) { 
+
+        gameover.TextSetzen("GAME OVER");
+        gameover.GanzNachVornBringen();
+        gameover.SichtbarkeitSetzen(true);
+        gameover.TextGrößeSetzen(100);
+        gameover.PositionSetzen(125, 250);
+        gameover.FarbeSetzen("rot");
+
+        restart.TextSetzen("press r to restart");
+        restart.GanzNachVornBringen();
+        restart.SichtbarkeitSetzen(true);
+        restart.TextGrößeSetzen(50);
+        restart.PositionSetzen(200, 300);
+
+        Zeichenfenster.TaktgeberStoppen();
+      }
   }
+
 }
