@@ -73,7 +73,7 @@ public class Spiel extends Ereignisbehandlung
       if(insekt2.Berührt(vogel1)) { insekt2.PositionSetzen(810, 50);  punkte += 5;}
 
       // berg logic
-      if(berg1.Berührt(vogel1)) { 
+      if(berg1.Berührt(vogel1) || berg2.Berührt(vogel1)) { 
         punkte = 0;
 
         gameover.TextSetzen("GAME OVER");
