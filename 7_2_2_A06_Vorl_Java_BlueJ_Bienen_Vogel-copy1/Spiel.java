@@ -6,7 +6,9 @@ public class Spiel extends Ereignisbehandlung
   private Wiese wiese1;
   private Vogel vogel1;
   private Berge berg2;
+  private Berge berg3;
   private Insekt insekt2;
+  private Insekt insekt3;
   private char taste;
   public Text gameover;
   public Text restart;
@@ -22,7 +24,9 @@ public class Spiel extends Ereignisbehandlung
     insekt1 = new Insekt(1);
     vogel1 = new Vogel();
     berg2 = new Berge();
+    berg3 = new Berge();
     insekt2 = new Insekt(1);
+    insekt3 = new Insekt(1);
     gameover = new Text();
     restart = new Text();
     punkteText = new Text();
@@ -36,7 +40,9 @@ public class Spiel extends Ereignisbehandlung
     berg1.PositionSetzen(270, 315);
     insekt1.PositionSetzen(300, 192);
     berg2.PositionSetzen(700, 315);
+    berg3.PositionSetzen(500, 315);
     insekt2.PositionSetzen(637, 50);
+    insekt3.PositionSetzen(50, 50);
     wiese1.NachHintenBringen();
     himmel1.NachHintenBringen();
       
@@ -50,7 +56,9 @@ public class Spiel extends Ereignisbehandlung
       berg1.PositionSetzen(270, 315);
       insekt1.PositionSetzen(300, 192);
       berg2.PositionSetzen(700, 315);
+      berg3.PositionSetzen(500, 315);
       insekt2.PositionSetzen(637, 50);
+    insekt3.PositionSetzen(50, 50);
       vogel1.PositionSetzen(93, 212);
       gameover.SichtbarkeitSetzen(false);
       restart.SichtbarkeitSetzen(false);
@@ -65,15 +73,18 @@ public class Spiel extends Ereignisbehandlung
       insekt1.Bewegen();
       berg2.Bewegen();
       insekt2.Bewegen();
+      insekt3.Bewegen();
+      berg3.Bewegen();
 
       punkteText.TextSetzen(String.valueOf(punkte));
 
       // insekt logic
       if(insekt1.Berührt(vogel1)) { insekt1.PositionSetzen(810, 192); punkte += 5;}
       if(insekt2.Berührt(vogel1)) { insekt2.PositionSetzen(810, 50);  punkte += 5;}
+      if(insekt3.Berührt(vogel1)) { insekt3.PositionSetzen(810, 50);  punkte += 5;}
 
       // berg logic
-      if(berg1.Berührt(vogel1) || berg2.Berührt(vogel1)) { 
+      if(berg1.Berührt(vogel1) || berg2.Berührt(vogel1) || berg3.Berührt(vogel1)) { 
         punkte = 0;
 
         gameover.TextSetzen("GAME OVER");
