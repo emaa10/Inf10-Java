@@ -1,5 +1,9 @@
 public class Spiel extends Ereignisbehandlung
 {
+  private Himmel himmel1;
+  private Wiese wiese1;
+  private Vogel vogel1;
+
   private Berge berg1;
   private Berge berg2;
   private Berge berg3;
@@ -8,19 +12,20 @@ public class Spiel extends Ereignisbehandlung
   private Insekt insekt2;
   private Insekt insekt3;
 
-  private Himmel himmel1;
-  private Wiese wiese1;
-  private Vogel vogel1;
-
   private char taste;
   public Text gameover;
   public Text restart;
   public Text punkteText;
   public int punkte = 0;
+  private boolean taktgeberStatus = true;
  
   
   
   public Spiel(){
+    himmel1 = new Himmel();
+    wiese1 = new Wiese();
+    vogel1 = new Vogel();
+
     berg1 = new Berge();
     berg2 = new Berge();
     berg3 = new Berge();
@@ -28,10 +33,6 @@ public class Spiel extends Ereignisbehandlung
     insekt1 = new Insekt(1);
     insekt2 = new Insekt(1);
     insekt3 = new Insekt(1);
-
-    himmel1 = new Himmel();
-    wiese1 = new Wiese();
-    vogel1 = new Vogel();
 
     gameover = new Text();
     restart = new Text();
@@ -59,7 +60,7 @@ public class Spiel extends Ereignisbehandlung
   public void TasteGedrückt (char taste) {
     this.taste = taste;
     System.out.println(taste);
-    if(taste == 'r') {
+    if(taste == 'r' && taktgeberStatus == false) {
       berg1.PositionSetzen(270, 315);
       berg2.PositionSetzen(700, 315);
       berg3.PositionSetzen(500, 315);
@@ -75,6 +76,7 @@ public class Spiel extends Ereignisbehandlung
 
   @Override
   public void TaktImpulsAusführen(){
+      taktgeberStatus = true;
       berg1.Bewegen();
       berg2.Bewegen();
       berg3.Bewegen();
@@ -106,6 +108,7 @@ public class Spiel extends Ereignisbehandlung
         restart.TextGrößeSetzen(50);
         restart.PositionSetzen(200, 300);
 
+        taktgeberStatus = false;
         Zeichenfenster.TaktgeberStoppen();
       }
   }
