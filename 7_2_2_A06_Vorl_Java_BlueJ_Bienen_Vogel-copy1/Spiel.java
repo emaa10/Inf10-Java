@@ -34,6 +34,9 @@ public class Spiel extends Ereignisbehandlung
     // insekt2 = new Insekt(1);
     // insekt3 = new Insekt(1);
     insekten = new Insekt[3];
+    insekten[0] = new Insekt(1);
+    insekten[1] = new Insekt(1);
+    insekten[2] = new Insekt(1);
 
     gameover = new Text();
     restart = new Text();
