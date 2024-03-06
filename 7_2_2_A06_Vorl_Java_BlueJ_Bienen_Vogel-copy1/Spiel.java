@@ -8,9 +8,10 @@ public class Spiel extends Ereignisbehandlung
   private Berge berg2;
   private Berge berg3;
 
-  private Insekt insekt1;
-  private Insekt insekt2;
-  private Insekt insekt3;
+  // private Insekt insekt1;
+  // private Insekt insekt2;
+  // private Insekt insekt3;
+  Insekt[] insekten;
 
   public Text gameover;
   public Text restart;
