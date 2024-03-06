@@ -30,9 +30,10 @@ public class Spiel extends Ereignisbehandlung
     berg2 = new Berge();
     berg3 = new Berge();
     
-    insekt1 = new Insekt(1);
-    insekt2 = new Insekt(1);
-    insekt3 = new Insekt(1);
+    // insekt1 = new Insekt(1);
+    // insekt2 = new Insekt(1);
+    // insekt3 = new Insekt(1);
+    insekten = new Insekt[3];
 
     gameover = new Text();
     restart = new Text();
@@ -48,9 +49,9 @@ public class Spiel extends Ereignisbehandlung
     berg2.PositionSetzen(700, 315);
     berg3.PositionSetzen(500, 315);
 
-    insekt1.PositionSetzen(300, 192);
-    insekt2.PositionSetzen(637, 50);
-    insekt3.PositionSetzen(50, 50);
+    // insekt1.PositionSetzen(300, 192);
+    // insekt2.PositionSetzen(637, 50);
+    // insekt3.PositionSetzen(50, 50);
     wiese1.NachHintenBringen();
     himmel1.NachHintenBringen();
       

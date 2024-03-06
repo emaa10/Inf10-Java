@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Insekt
+comment0.text=\r\n\ Klasse\ zur\ Beschreibung\ eines\ Insekts.\r\n\ \r\n\ @author\ Klaus\ Reinold\ \r\n\ @version\ 1.0\r\n
+comment1.params=phaseNeu
+comment1.target=Insekt(int)
+comment1.text=\r\n\ Konstruktor\ des\ Insekts\r\n\ @param\ phaseNeu\ die\ Startpahse\ der\ Fl\u00FCgelbewegung\r\n
+comment2.params=
+comment2.target=void\ Fl\u00FCgelObenZeichnen()
+comment2.text=\r\n\ Zeichnet\ das\ Objekt\ in\ Position\ "Fl\u00FCgel\ oben"\r\n
+comment3.params=
+comment3.target=void\ Fl\u00FCgelUntenZeichnen()
+comment3.text=\r\n\ Zeichnet\ das\ Objekt\ in\ Position\ "Fl\u00FCgel\ unten"\r\n
+comment4.params=
+comment4.target=void\ Bewegen()
+comment4.text=\r\n\ Bewegt\ das\ Insekt\ nach\ links\r\n
+comment5.params=
+comment5.target=void\ AktionAusf\u00FChren()
+comment5.text=\r\n\ Aktionsmethode\r\n
+numComments=6
