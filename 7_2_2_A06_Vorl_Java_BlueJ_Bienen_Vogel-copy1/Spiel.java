@@ -12,7 +12,6 @@ public class Spiel extends Ereignisbehandlung
   private Insekt insekt2;
   private Insekt insekt3;
 
-  private char taste;
   public Text gameover;
   public Text restart;
   public Text punkteText;
@@ -58,7 +57,6 @@ public class Spiel extends Ereignisbehandlung
   
   @Override
   public void TasteGedrückt (char taste) {
-    this.taste = taste;
     System.out.println(taste);
     if(taste == 'r' && taktgeberStatus == false) {
       berg1.PositionSetzen(270, 315);
