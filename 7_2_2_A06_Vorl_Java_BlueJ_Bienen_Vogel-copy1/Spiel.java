@@ -81,9 +81,9 @@ public class Spiel extends Ereignisbehandlung
       berg1.Bewegen();
       berg2.Bewegen();
       berg3.Bewegen();
-      // insekt1.Bewegen();
-      // insekt2.Bewegen();
-      // insekt3.Bewegen();
+      for(Insekt ins :insekten) { // geht oben nicht weil da im feld noch nix drin war
+        ins.Bewegen();
+      }
 
       punkteText.TextSetzen(String.valueOf(punkte));
 
