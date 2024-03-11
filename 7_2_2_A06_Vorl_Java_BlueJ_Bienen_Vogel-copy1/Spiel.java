@@ -88,9 +88,9 @@ public class Spiel extends Ereignisbehandlung
       punkteText.TextSetzen(String.valueOf(punkte));
 
       // insekt logic
-      // if(insekt1.Berührt(vogel1)) { insekt1.PositionSetzen(810, 192); punkte += 5;}
-      // if(insekt2.Berührt(vogel1)) { insekt2.PositionSetzen(810, 50);  punkte += 5;}
-      // if(insekt3.Berührt(vogel1)) { insekt3.PositionSetzen(810, 50);  punkte += 5;}
+      if(insekten[0].Berührt(vogel1)) { insekten[0].PositionSetzen(810, 192); punkte += 5;}
+      if(insekten[1].Berührt(vogel1)) { insekten[1].PositionSetzen(810, 50);  punkte += 5;}
+      if(insekten[2].Berührt(vogel1)) { insekten[2].PositionSetzen(810, 50);  punkte += 5;}
 
       // berg logic
       if(berg1.Berührt(vogel1) || berg2.Berührt(vogel1) || berg3.Berührt(vogel1)) { 
