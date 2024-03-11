@@ -8,9 +8,6 @@ public class Spiel extends Ereignisbehandlung
   private Berge berg2;
   private Berge berg3;
 
-  // private Insekt insekt1;
-  // private Insekt insekt2;
-  // private Insekt insekt3;
   Insekt[] insekten;
 
   public Text gameover;
@@ -65,9 +62,9 @@ public class Spiel extends Ereignisbehandlung
       berg1.PositionSetzen(270, 315);
       berg2.PositionSetzen(700, 315);
       berg3.PositionSetzen(500, 315);
-      // insekt1.PositionSetzen(300, 192);
-      // insekt2.PositionSetzen(637, 50);
-      // insekt3.PositionSetzen(50, 50);
+      insekten[0].PositionSetzen(300, 192);
+      insekten[1].PositionSetzen(637, 50);
+      insekten[2].PositionSetzen(50, 50);
       vogel1.PositionSetzen(93, 212);
       gameover.SichtbarkeitSetzen(false);
       restart.SichtbarkeitSetzen(false);
@@ -88,9 +85,9 @@ public class Spiel extends Ereignisbehandlung
       punkteText.TextSetzen(String.valueOf(punkte));
 
       // insekt logic
-      if(insekten[0].Berührt(vogel1)) { insekten[0].PositionSetzen(810, 192); punkte += 5;}
-      if(insekten[1].Berührt(vogel1)) { insekten[1].PositionSetzen(810, 50);  punkte += 5;}
-      if(insekten[2].Berührt(vogel1)) { insekten[2].PositionSetzen(810, 50);  punkte += 5;}
+      for (Insekt ins :insekten) {
+        if(ins.Berührt(vogel1)) { ins.PositionSetzen(810, ins.YPositionGeben()); }
+      }
 
       // berg logic
       if(berg1.Berührt(vogel1) || berg2.Berührt(vogel1) || berg3.Berührt(vogel1)) { 
