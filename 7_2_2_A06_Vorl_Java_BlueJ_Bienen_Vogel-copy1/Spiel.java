@@ -86,7 +86,7 @@ public class Spiel extends Ereignisbehandlung
 
       // insekt logic
       for (Insekt ins :insekten) {
-        if(ins.Berührt(vogel1)) { ins.PositionSetzen(810, ins.YPositionGeben()); }
+        if(ins.Berührt(vogel1)) { ins.PositionSetzen(810, ins.YPositionGeben()); punkte += 5;}
       }
 
       // berg logic
