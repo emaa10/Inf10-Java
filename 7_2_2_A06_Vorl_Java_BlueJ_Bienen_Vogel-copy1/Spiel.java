@@ -73,15 +73,15 @@ public class Spiel extends Ereignisbehandlung
       taktgeberStatus = true;
       berge[0].Bewegen();
       berge[1].Bewegen();
-      for(Insekt ins :insekten) { // geht oben nicht weil da im feld noch nix drin war
-        ins.Bewegen();
+      for(int i = 0; i<insekten.length; i++) { // geht oben nicht weil da im feld noch nix drin war
+        insekten[i].Bewegen();
       }
 
       punkteText.TextSetzen(String.valueOf(punkte));
 
       // insekt logic
-      for (Insekt ins :insekten) {
-        if(ins.Berührt(vogel1)) { ins.PositionSetzen(810, ins.YPositionGeben()); punkte += 5;}
+      for (int i = 0; i<insekten.length; i++) {
+        if(insekten[i].Berührt(vogel1)) { insekten[i].PositionSetzen(810, insekten[i].YPositionGeben()); punkte += 5;}
       }
 
       // berg logic
@@ -108,4 +108,13 @@ public class Spiel extends Ereignisbehandlung
       }
   }
 
+  public void insektenVerdoppeln() {
+    int lenght = insekten.length;
+    int newLenght = lenght * 2;
+    insekten = new Insekt[newLenght];
+    for(int i = 0;i<newLenght;i++) {
+      insekten[i] = new Insekt(1);
+      insekten[i].PositionSetzen(newLenght+50, 300);
+    }
+  }
 }
