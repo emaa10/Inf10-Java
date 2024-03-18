@@ -110,14 +110,23 @@ public class Spiel extends Ereignisbehandlung
 
   public void insektenVerdoppeln() {
     Insekt[] insekten_new = new Insekt[insekten.length * 2];
-    for(int i = 0; i<insekten_new.length; i++) {
-      if(i<=insekten.length) {
-        insekten_new[i] = insekten[i];
-      } else if(i>insekten.length) {
-        insekten_new[i] = new Insekt(1);
-        insekten_new[i].
-      }
-    }
-    
+
+    for (int i = 0; i < insekten.length; i++) {
+      int newIndex = i * 2;
+      int oldIndex = i;
+
+      // Kopieren des vorhandenen Insekts
+      insekten_new[newIndex] = insekten[oldIndex];
+
+
+      // Erstellen eines neuen Insekts mit verschobener X-Position
+      insekten_new[newIndex + 1] = new Insekt(1);
+      insekten_new[newIndex + 1].PositionSetzen(insekten[oldIndex].XPositionGeben() + 3, insekten[oldIndex].YPositionGeben());
+      // (
+      //     urspruenglichesArray[oldIndex].x + 5,
+      //     urspruenglichesArray[oldIndex].y
+      // );
+      insekten = insekten_new;
+  }    
   }
 }
