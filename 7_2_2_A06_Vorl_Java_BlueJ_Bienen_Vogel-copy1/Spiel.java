@@ -109,12 +109,15 @@ public class Spiel extends Ereignisbehandlung
   }
 
   public void insektenVerdoppeln() {
-    int lenght = insekten.length;
-    int newLenght = lenght * 2;
-    insekten = new Insekt[newLenght];
-    for(int i = 0;i<newLenght;i++) {
-      insekten[i] = new Insekt(1);
-      insekten[i].PositionSetzen(newLenght+50, 300);
+    Insekt[] insekten_new = new Insekt[insekten.length * 2];
+    for(int i = 0; i<insekten_new.length; i++) {
+      if(i<=insekten.length) {
+        insekten_new[i] = insekten[i];
+      } else if(i>insekten.length) {
+        insekten_new[i] = new Insekt(1);
+        insekten_new[i].
+      }
     }
+    
   }
 }
