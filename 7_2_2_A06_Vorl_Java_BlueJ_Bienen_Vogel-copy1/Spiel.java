@@ -108,6 +108,22 @@ public class Spiel extends Ereignisbehandlung
       }
   }
 
+  public void sechsInsekten() {
+    // Deklaration und Initialisierung des neuen Felds
+    Insekt[] insekten2 = new Insekt[6];
+    // Kopieren der Elemente des alten Feldes in das größere, neue Feld
+    for(int i = 0; i < insekten.length; i++) {
+      insekten2[i] = insekten[i];
+    }
+    // insekten2 wieder in insekten speichern
+    insekten = insekten2;
+    // anlegen der neuen Insekten
+    for(int i = 3; i < insekten.length; i++) {
+      insekten[i] = new Insekt(1);
+      insekten[i].PositionSetzen(insekten[i-3].XPositionGeben() + 50, insekten[i-3].YPositionGeben());
+    }
+  }
+
   public void insektenVerdoppeln() {
     Insekt[] insekten_new = new Insekt[insekten.length * 2];
 
