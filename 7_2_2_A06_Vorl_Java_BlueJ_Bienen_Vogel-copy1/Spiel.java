@@ -152,5 +152,12 @@ public class Spiel extends Ereignisbehandlung
     berge = berge_new;
   }
 
+  public void verdoppeln(String wasVerdoppeln) {
+    if(wasVerdoppeln.equals("berge")) {
+      bergeVerdoppeln();
+    } else if(wasVerdoppeln.equals("insekten")) {
+      insektenVerdoppeln();
+    }
+  }
 
 }
