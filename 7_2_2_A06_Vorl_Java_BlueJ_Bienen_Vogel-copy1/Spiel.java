@@ -71,8 +71,9 @@ public class Spiel extends Ereignisbehandlung
   @Override
   public void TaktImpulsAusführen(){
       taktgeberStatus = true;
-      berge[0].Bewegen();
-      berge[1].Bewegen();
+      for(int i = 0; i<berge.length; i++) {
+        berge[i].Bewegen();
+      }
       for(int i = 0; i<insekten.length; i++) { // geht oben nicht weil da im feld noch nix drin war
         insekten[i].Bewegen();
       }
@@ -136,6 +137,20 @@ public class Spiel extends Ereignisbehandlung
     }
 
     insekten = insekten_new;
-}
+  }
+
+  public void bergeVerdoppeln() {
+    Berge[] berge_new = new Berge[berge.length * 2];
+
+    for (int i = 0; i < berge.length; i++) {
+      int newIndex = i * 2;
+      int oldIndex = i;
+      berge_new[newIndex] = berge[oldIndex];
+      berge_new[newIndex+1] = new Berge();
+      berge_new[newIndex+1].PositionSetzen(berge[oldIndex].XPositionGeben() + 5, berge[oldIndex].YPositionGeben());
+    }
+    berge = berge_new;
+  }
+
 
 }
