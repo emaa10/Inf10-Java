@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Spiel extends Ereignisbehandlung
 {
   private Himmel himmel1;
@@ -158,6 +160,12 @@ public class Spiel extends Ereignisbehandlung
     } else if(wasVerdoppeln.equals("insekten")) {
       insektenVerdoppeln();
     }
+  }
+
+  public void fünfInsekten() {
+    ArrayList<Insekt> i3;
+    i3 = new ArrayList<Insekt>();
+    i3.add(new Insekt(0));
   }
 
 }
