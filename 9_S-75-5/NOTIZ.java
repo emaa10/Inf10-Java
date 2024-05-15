@@ -6,14 +6,16 @@ public class NOTIZ{
     public NOTIZ(String ninhalt, int nPrio) {
         inhalt = ninhalt;
         priority = nPrio;
-        // erstellungsZeitpunk = time.now();
+        erstellungsZeitpunk = 0;
     }
 
     public String inhaltGeben() {
         return inhalt;
     }
 
-    // public 
+    public long erstellungsZeitpunkGeben() {
+        return erstellungsZeitpunk;
+    }
 
     public int priorityGeben() {
         return priority;
