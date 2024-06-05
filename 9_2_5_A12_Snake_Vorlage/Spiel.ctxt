@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Spiel
+comment0.text=\n\ Rahmenklasse\ des\ Spiels\n\ \n\ @author\ Albert\ Wiedemann\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=Spiel()
+comment1.text=\n\ Baut\ die\ Basiselemente\ auf.\n
+comment2.params=
+comment2.target=void\ TaktImpulsAusf\u00FChren()
+comment2.text=\n\ Bewegt\ die\ Schlange.\n
+comment3.params=welche
+comment3.target=void\ TasteGedr\u00FCckt(char)
+comment3.text=\n\ Wertet\ die\ Tasteneingaben\ aus.\n\ @param\ welche\ Tastencode\n
+numComments=4
