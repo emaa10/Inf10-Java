@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Vogel
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Vogel.\r\n\ \r\n\ @author\ Klaus\ Reinold\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=Vogel()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Vogel\r\n
+comment2.params=
+comment2.target=void\ Fl\u00FCgelObenZeichnen()
+comment2.text=\r\n\ Zeichnet\ die\ Figur\ in\ der\ Position\ "Fl\u00FCgel\ oben"\r\n
+comment3.params=
+comment3.target=void\ Fl\u00FCgelUntenZeichnen()
+comment3.text=\r\n\ Zeichnet\ die\ Figur\ in\ der\ Position\ "Fl\u00FCgel\ unten"\r\n
+comment4.params=
+comment4.target=void\ Fl\u00FCgelMitteZeichnen()
+comment4.text=\r\n\ Zeichnet\ die\ Figur\ in\ der\ Position\ "Fl\u00FCgel\ mittig"\r\n
+comment5.params=
+comment5.target=void\ AktionAusf\u00FChren()
+comment5.text=\r\n\ Taktsteuerung\ des\ Vogels\r\n
+comment6.params=code
+comment6.target=void\ SonderTasteGedr\u00FCckt(int)
+comment6.text=\r\n\ Tastensteuerung\ des\ Vogels\r\n
+numComments=7
