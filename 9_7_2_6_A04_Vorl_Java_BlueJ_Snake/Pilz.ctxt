@@ -1,5 +1,7 @@
 #BlueJ class context
 comment0.target=Pilz
-comment1.params=
-comment1.target=Pilz()
-numComments=2
+comment1.params=s
+comment1.target=Pilz(Spiel)
+comment2.params=
+comment2.target=void\ Aktion()
+numComments=3
