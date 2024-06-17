@@ -1,5 +1,13 @@
 #BlueJ class context
 comment0.target=Sonderfeld
-comment1.params=
-comment1.target=Sonderfeld()
-numComments=2
+comment1.params=s
+comment1.target=Sonderfeld(Spiel)
+comment2.params=
+comment2.target=int\ XPositionGeben()
+comment3.params=
+comment3.target=int\ YPositionGeben()
+comment4.params=
+comment4.target=void\ Aktion()
+comment5.params=
+comment5.target=void\ zufaelligPositionieren()
+numComments=6

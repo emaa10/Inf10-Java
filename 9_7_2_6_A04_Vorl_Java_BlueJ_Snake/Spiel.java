@@ -26,6 +26,8 @@ class Spiel extends EreignisBehandlung
     /** Restschritte für Bremsen */
     private int bremsZähler;
     // Attribut zum Verwalten der Sonderfelder
+
+    private ArrayList<Sonderfeld> sonderfelder;
     
     /**
      * Baut die Basiselemente auf.

@@ -18,7 +18,7 @@ public class Sonderfeld {
     public void Aktion() {
     } // leer, da die Methode in den Unterklassen überschrieben werden muss
 
-    public void zufaelligPositionieren() {
+    protected void zufaelligPositionieren() {
         int x;
         int y;
         do {
