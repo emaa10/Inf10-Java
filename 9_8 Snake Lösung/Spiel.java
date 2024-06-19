@@ -25,9 +25,8 @@ class Spiel extends EreignisBehandlung
     private int sonderZähler;
     /** Restschritte für Bremsen */
     private int bremsZähler;
-    // Attribut zum Verwalten der Sonderfelder
-
-    private ArrayList<Sonderfeld> sonderfelder;
+    /** Die Sonderfelder */
+    private ArrayList<SonderFeld> sonderfelder;
     
     /**
      * Baut die Basiselemente auf.
@@ -37,6 +36,7 @@ class Spiel extends EreignisBehandlung
         char richtung;
         int xStart, yStart;
         zzGenerator = new Random();
+        sonderfelder = new ArrayList<SonderFeld>();
         switch (zzGenerator.nextInt(4))
         {
             case 0:
@@ -61,10 +61,15 @@ class Spiel extends EreignisBehandlung
         sonderZähler = 0;
         bremsZähler = 0;
         TaktdauerSetzen(500);
-        sonderfelder.add(Apfel);
-        // da feid no wos
-        // Anlegen der Sonderfelder
-        sonderfelder = new ArrayList<Sonderfeld>();
+        sonderfelder.add(new Apfel(this));
+        for (int i = 1; i <= 5; i++)
+        {
+            sonderfelder.add(new Pilz(this));
+        }
+        for (int i = 1; i <= 5; i++)
+        {
+            sonderfelder.add(new Minus(this));
+        }
     }
 
     /**
@@ -93,7 +98,13 @@ class Spiel extends EreignisBehandlung
      */
     boolean IstFrei(int x, int y)
     {
-        //Berücksichtigung der Sonderfelder einbauen
+        for (SonderFeld s: sonderfelder)
+        {
+            if ((s != null) && (s.XPositionGeben() == x) && (s.YPositionGeben() == y))
+            {
+                return false;
+            }            
+        }
         if ((schlange.XPositionGeben() == x) && (schlange.YPositionGeben() == y))
         {
             return false;
@@ -132,8 +143,14 @@ class Spiel extends EreignisBehandlung
         spielfeldrand.SonderanzeigeSetzen("+");
     }
     
-    // Methode zum Entfernen eines Sonderfelds
-    
+    /**
+     * Entfernt das angegebene Sonderfeldobjekt aus sonderfelder.
+     * @param was die zu entfernene Referenz
+     */
+    void Entfernen(SonderFeld was)
+    {
+        sonderfelder.remove(was);
+    }
 
     /**
      * Bewegt die Schlange.
@@ -173,7 +190,7 @@ class Spiel extends EreignisBehandlung
                 }
                 bremsZähler -= 1;
             }
-            for (Sonderfeld s: (ArrayList<Sonderfeld>)sonderfelder)
+            for (SonderFeld s: (ArrayList<SonderFeld>)sonderfelder.clone())
             {
                 if ((s != null) &&
                     (schlange.XPositionGeben() == s.XPositionGeben()) &&

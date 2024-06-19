@@ -11,8 +11,8 @@ public class Minus extends Sonderfeld
 
     @Override 
     public void Aktion() {
-        spiel.PunkteÄndern(200);
-        zufaelligPositionieren();
+        spiel.Bremsen();
+        
     }
 
 }
