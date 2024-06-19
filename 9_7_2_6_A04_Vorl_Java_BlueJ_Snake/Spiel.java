@@ -62,6 +62,7 @@ class Spiel extends EreignisBehandlung
         bremsZähler = 0;
         TaktdauerSetzen(500);
         // Anlegen der Sonderfelder
+        sonderfelder = new ArrayList<Sonderfeld>();
     }
 
     /**
@@ -147,11 +148,38 @@ class Spiel extends EreignisBehandlung
                 schlange.Bewegen(true);
                 aktSchritte = maxSchritte;
             }
+            else if (sonderZähler > 0)
+            {
+                schlange.Bewegen(true);
+                sonderZähler -= 1;
+            }
             else
             {
                 schlange.Bewegen(false);
             }
             punkte += 1;
+            if (bremsZähler > 0)
+            {
+                if (bremsZähler == 1)
+                {
+                    TaktdauerSetzen(500);
+                    spielfeldrand.SonderanzeigeSetzen("");
+                }
+                else if (bremsZähler == 10)
+                {
+                    spielfeldrand.SonderanzeigeSetzen("!");
+                }
+                bremsZähler -= 1;
+            }
+            for (SonderFeld s: (ArrayList<SonderFeld>)sonderfelder.clone())
+            {
+                if ((s != null) &&
+                    (schlange.XPositionGeben() == s.XPositionGeben()) &&
+                    (schlange.YPositionGeben() == s.YPositionGeben()))
+                {
+                    s.Aktion();
+                }
+            }
             spielfeldrand.PunkteSetzen(punkte);
         }
         else
